@@ -1,0 +1,62 @@
+<p>包依赖与要求：</p>
+<ul>
+<li>核心依赖：无（编译与运行不需要任何强制外部包）。</li>
+<li>包架构：完全模块化的程序集定义（DecnetGames.JuiceSystem.Runtime、DecnetGames.JuiceSystem.Editor、DecnetGames.JuiceSystem.Demo）。</li>
+<li>可选集成（通过预处理器符号自动检测）：</li>
+<li>TextMeshPro (com.unity.textmeshpro)：可选。安装时自动启用高分辨率浮动战斗伤害弹窗。未安装时启用标准回退。</li>
+<li>Cinemachine (com.unity.cinemachine)：可选。自动挂接 Cinemachine 虚拟相机实现冲量噪声震动。未安装时启用标准相机回退。</li>
+<li>Universal Render Pipeline (com.unity.render-pipelines.universal)：可选。URP 激活时自动连接屏幕抓取与音量覆盖（色差、泛光、镜头畸变）。</li>
+<li>Post-Processing Stack v2 (com.unity.postprocessing)：可选。完整支持 Built-in 渲染管线后期处理体积。</li>
+<li>Input System (com.unity.inputsystem)：可选。自动支持新版 Unity Input System 手柄震动，同时保留旧版输入兼容性。</li>
+</ul>
+<p>主要功能列表</p>
+<p>1. 核心物理与程序化运动</p>
+<ul>
+<li>二阶谐波弹簧</li>
+<li>保持体积的挤压</li>
+<li>定向冲击拉伸</li>
+<li>有机正弦摆动</li>
+<li>零 GC 变换弹簧</li>
+<li>原生 UI 弹簧</li>
+<li>任意轴向变形</li>
+</ul>
+<p>2. 镜头打磨与屏幕冲击</p>
+<ul>
+<li>基于创伤值的屏幕震动</li>
+<li>Cinemachine 自动桥接</li>
+<li>定向后坐冲击</li>
+<li>动态 FOV 缩放冲击</li>
+<li>GPU 径向冲击波</li>
+<li>零 GC 材质闪烁</li>
+<li>屏幕故障效果</li>
+<li>残影冲刺拖尾</li>
+</ul>
+<p>3. 时间、音频与反馈编排</p>
+<ul>
+<li>帧级精准顿帧</li>
+<li>平滑慢动作缓动</li>
+<li>循环时间回溯</li>
+<li>零 GC 音频池</li>
+<li>程序化音高微调</li>
+<li>主 DSP 压低</li>
+<li>双马达手柄震动</li>
+<li>Timeline 节点序列器</li>
+</ul>
+<p>4. 开发者工具与预设</p>
+<ul>
+<li>一行静态 API</li>
+<li>50+ 即用预设</li>
+<li>一键配置医生</li>
+<li>赛博朋克中央仪表盘</li>
+<li>交互式弹簧可视化器</li>
+<li>Scene View 浮动 HUD</li>
+<li>Hierarchy 状态徽章</li>
+<li>生产级 C# 代码生成器</li>
+<li>拖放式果汁 UI</li>
+</ul>
+<p>Unity 引擎兼容性</p>
+<ul>
+<li><strong>Unity 2021.3 LTS</strong>（已完整测试）</li>
+<li><strong>Unity 2022.3 LTS</strong>（已完整测试）</li>
+<li><strong>Unity 6 (6000.x)+</strong>（已完整测试与验证）</li>
+</ul>
