@@ -1,0 +1,80 @@
+<p><strong>让僵硬、飘浮的玩法变成令人上瘾、打击感十足的游戏体验</strong></p>
+<p>有没有想过，为什么在《空洞骑士》《蔚蓝》或《毁灭战士》里击中敌人的感觉如此令人满足，而你的原型却像纸板一样？</p>
+<p><strong>秘密不在于高端图形。而在于果汁感（Juice）。</strong></p>
+<p>游戏手感是玩家的手指与屏幕之间的触觉对话。当一次攻击命中时，玩家期待一整套微事件的即时交响：0.08 秒的帧冻结（<strong>HitStop</strong>）、定向镜头冲击、基于创伤值的屏幕震动、色差脉冲、保持体积的角色变形，以及带低通压低的随机音高音频。</p>
+<p><a href="https://discord.gg/FTXfv8mcVh">加入 DISCORD</a> | <a href="https://decnet-games.github.io/Game-Feel-Juice-Doc/">文档</a> | <a href="https://assetstore.unity.com/publishers/118262">其他作品</a></p>
+<p><strong>为什么大多数独立游戏原型玩起来平淡、飘忽、没有成就感？</strong></p>
+<p>因为真正的"游戏手感"需要几十种相互交织的微反馈：保持体积的挤压、响应灵敏的二阶弹簧物理、基于创伤曲线的镜头震动、帧级精准的顿帧，以及动态音频压低。从零开始搭建这些需要数周繁琐的样板代码，还可能因为垃圾回收（GC）峰值而拖垮移动端帧率。</p>
+<p><strong>隆重推出 PULSE —— Unity 终极 AAA 级游戏手感与打磨引擎。</strong></p>
+<p>PULSE 专为拒绝在触感满足与零开销性能之间妥协的开发者设计，只需<strong>一行零 GC 的 C# 代码</strong>，或<strong>一次检查器预设点击</strong>，即可获得整套工作室级别的反馈流水线。</p>
+<p>PULSE 拥有交互式<strong>二阶弹簧工作室</strong>、基于创伤值的<strong>镜头震动（附 Cinemachine 桥接）</strong>、径向<strong>冲击波着色器</strong>、对象池化的<strong>战斗飘字弹窗</strong>，以及<strong>一键场景配置医生</strong>，能在几秒内把业余玩法变成打击感十足、令人上瘾的游戏体验。</p>
+<p>内置超过 <strong>50+ 个实战打磨的预设</strong>，涵盖战斗、移动、街机与 UI，你再也不会发布一款僵硬的游戏。</p>
+<p>别再和笨拙的补间动画较劲了。<strong>今天就为你的游戏注入果汁感吧。</strong></p>
+<p>默认的 Unity 开箱即用地什么都不提供。你只能自己写杂乱的协程、与 DOTween 的内存分配搏斗，或者购买臃肿的 150MB 巨型框架、花三天时间学习。</p>
+<p><strong>PULSE 永久解决这一切。</strong></p>
+<p>PULSE 被打造成一个干净、高性能、暗色科技风的强力引擎，提供工业级的游戏手感流水线：运行时<strong>零 GC 分配</strong>，且<strong>零样板代码</strong>。</p>
+<p><strong>⚡ 一个统一引擎，八大强力模块</strong></p>
+<p>1. 🌀 二阶谐波弹簧物理引擎</p>
+<p>告别僵硬、机械的线性补间。PULSE 采用真正的<strong>二阶微分谐振子物理</strong>（精确模拟质量、角频率 f、阻尼比 ζ 与初速度响应 r）。</p>
+<ul>
+<li><strong>任意目标，零分配：</strong> 驱动 <strong>Transform</strong>（位置、旋转、缩放）与 <strong>UI RectTransform</strong>（anchoredPosition、sizeDelta、CanvasGroup 透明度）。</li>
+<li><strong>交互式弹簧工作室：</strong> 在写任何一行代码之前，用实时曲线可视化窗口调整阻尼与弹性。</li>
+<li><strong>即时预设：</strong> 在 <strong>Snappy</strong>、<strong>Bouncy</strong>、<strong>Gentle</strong>、<strong>Stiff</strong> 与 <strong>Wobbly</strong> 动态之间瞬间切换。</li>
+</ul>
+<p>2. 🎥 基于创伤值的镜头打磨与 Cinemachine 自动桥接</p>
+<p>基于行业标准的创伤模型（Trauma² / Trauma³ 衰减），PULSE 提供自然、物理的屏幕震动，永不穿帮，也不会让玩家晕头转向。</p>
+<ul>
+<li><strong>智能创伤管理：</strong> 平滑叠加爆炸冲击，不会出现剧烈的镜头跳动。</li>
+<li><strong>定向冲击与 FOV 缩放冲击：</strong> 沿后坐力向量冲击镜头，并在重击时脉冲式改变视野范围，伴随平滑的指数恢复。</li>
+<li><strong>无缝支持 Cinemachine 2 与 3：</strong> 零设置的适配器自动连接到你正在使用的虚拟相机。</li>
+</ul>
+<p>3. 🧪 保持体积的挤压、拉伸与有机摆动</p>
+<p>以物理质量守恒为 2D 精灵与 3D 模型注入生命。</p>
+<ul>
+<li><strong>数学体积守恒：</strong> 当角色沿 Y 轴压扁时（Sy<1），X 与 Z 轴会自动膨胀（3D 网格为 1/Sy，2D 精灵为 1/Sx），以保持精确的物理体积。</li>
+<li><strong>任意冲击轴：</strong> 可对着斜墙、斜坡或天花板挤压。</li>
+<li><strong>正弦摆动/抖动：</strong> 旋转、位置与缩放的衰减谐波抖动，适用于果冻怪物、UI 徽章与着陆冲击。</li>
+</ul>
+<p>4. ⏱️ 帧级精准的顿帧、慢动作与时间回溯</p>
+<p>以微秒级精度控制游戏的时间流。</p>
+<ul>
+<li><strong>微型顿帧：</strong> 在重型武器命中时将场景定格 50–100 毫秒，带来直击内心的打击感。</li>
+<li><strong>平滑慢动作缓动：</strong> 以自定义的三次方缓入缓出曲线过渡到子弹时间，同时保持 UI 音频的响应性。</li>
+<li><strong>集成的时间回溯系统：</strong> 内置环形缓冲区跟踪变换的位置与速度，无需外部包即可即时回溯。</li>
+</ul>
+<p>5. 💥 GPU 冲击波、屏幕故障与冲击特效</p>
+<p>将简单的命中变成视觉奇观，同时不拖垮你的填充率。</p>
+<ul>
+<li><strong>自定义冲击波着色器：</strong> 优化的径向屏幕折射，带色差边缘，适用于爆炸、Boss 践踏与法术释放（URP 与 Built-in）。</li>
+<li><strong>零分配材质闪烁：</strong> 受伤时纯 MaterialPropertyBlock 闪烁染色 — <strong>产生 0 B 垃圾</strong>。</li>
+<li><strong>残影/拖尾：</strong> 高性能的网格/精灵快照拖尾，适用于冲刺、传送与高速运动。</li>
+<li><strong>粒子池编排器：</strong> 在碰撞接触点即时爆发池化的火花与尘埃粒子，无需运行时实例化。</li>
+</ul>
+<p>6. 🔊 零 GC 空间音频与主 DSP 低通压低</p>
+<p>音频占游戏手感的 50%。PULSE 包含一个完整的程序化音频子引擎。</p>
+<ul>
+<li><strong>零分配音频池：</strong> 32 个预热音频通道，防止激烈交火时的帧卡顿。</li>
+<li><strong>智能音高与音量微调：</strong> 通过细微的程序化音高变化（1.0±0.1）消除令人畏惧的"机关枪式音频疲劳"。</li>
+<li><strong>动态 DSP 低通压低：</strong> 在慢动作、低血量或水下状态下，通过主音频监听器即时闷住世界音频。</li>
+</ul>
+<p>7. 🏷️ TextMeshPro 浮动战斗数字与拖放式果汁 UI</p>
+<p>再也不用写浮动文本管理器了。</p>
+<ul>
+<li><strong>池化战斗数字：</strong> 世界空间的广告牌式伤害弹窗、暴击弹跳与治疗计数，带可自定义的抛物线轨迹。</li>
+<li><strong>拖放式果汁 UI 组件：</strong> 用 <strong>JuicyButton</strong>、<strong>JuicyHealthBar</strong>（延迟残影血条）、<strong>JuicySlider</strong> 与 <strong>JuicyWindow</strong> 替换原装 Unity UI 元素，即时获得触感十足的界面打磨。</li>
+</ul>
+<p>8. 🎛️ 赛博朋克暗色科技编辑器套件与预设库</p>
+<p>为速度、愉悦与开发者人体工学而设计。</p>
+<ul>
+<li><strong>中央指挥仪表盘：</strong> 实时事件日志、实时测试触发器与交互式代码片段生成器。</li>
+<li><strong>一键场景配置医生：</strong> 一键自动验证项目渲染管线、标签、音频监听器与相机装备。</li>
+<li><strong>Scene View 浮动 HUD 与 Hierarchy 徽章：</strong> 直接在 Scene View 中触发与试听反馈，无需进入 Play Mode。</li>
+<li><strong>50+ AAA 即用预设：</strong> 战斗、移动、街机与 UI 预设，拖放即用。</li>
+</ul>
+<p>👥 为你游戏工作室的每个角色而打造</p>
+<ul>
+<li><strong>面向游戏设计师：</strong> 打造打击感十足的武器、响应灵敏的平台跳跃与果汁感 UI，无需等待程序员排期。在 Spring Studio 中可视化调整弹簧与曲线。</li>
+<li><strong>面向程序员：</strong> 享受干净、地道的 C# API。一行静态代码即可访问一切（Pulse.ScreenShake() 或 Pulse.HitStop()）。零 GC 分配、零线程阻塞、100% 原生 Unity 执行。</li>
+<li><strong>面向关卡设计师：</strong> 将预配置的弹跳垫、可破坏箱子与环境陷阱放入场景，配有预烘焙的反馈配置，开箱即用。</li>
+<li><strong>面向 QA 与技术总监：</strong> 安心入睡 — 你的游戏手感流水线已针对受限的移动端、Nintendo Switch 与 WebGL 目标优化，拥有严格的零 GC 循环与干净的 asmdef 分离。</li>
+</ul>
